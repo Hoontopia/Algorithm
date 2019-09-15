@@ -8,7 +8,7 @@ import Foundation
  */
 
 struct Stack<E> {
-    var elements: [E] = []
+    private var elements: [E] = []
     
     var isEmpty: Bool {
         return elements.isEmpty
@@ -38,6 +38,4 @@ extension Stack: ExpressibleByArrayLiteral {
 }
 
 var stack: Stack<Int> = [1, 2]
-stack.push(1)
-stack.push(2)
 print(stack.pop())
